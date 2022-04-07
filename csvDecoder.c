@@ -116,7 +116,7 @@ int setCells(cell* p,char* stcsv)
 		if ((str[j] = stcsv[k]) == '"'&& !flagcolon)
 			flag = !(flag);
 		//sender change from colon reference to list 
-		if (str[j] == ':' && str[0] == '=') 
+		if (str[j] == ':' && (str[0] == '='||str[0]=='"'&&str[1]=='='))
 			if((l = endcolon = extentRef(stcsv + k + 1)) != 0 && (startcolon = extentRefReverse(str, j - 1)) != 0)
 				{
 					colon = j;
