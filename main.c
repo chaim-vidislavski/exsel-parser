@@ -8,7 +8,7 @@
 
 int main(int argc, char* argv[])
 {
-	if (argc != 2 && 0)
+	if (argc != 2)
 	{
 		printf("The number of arguments is incorrect");
 		return 0;
